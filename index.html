@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lautaro Gonzalez - Game Developer Portfolio</title>
+    <style>
+        /* --- Style Update: Green Theme --- */
+        :root {
+            --primary-color: #14ff51; /* The vibrant green you requested */
+            --primary-color-hover: #6aff8f; /* A lighter green for hover effects */
+            --primary-color-darker: #0ea83e; /* A darker green for button hover */
+            --background-color: #121212;
+            --surface-color: #1A1A1A; /* Slightly adjusted for better contrast */
+            --main-text-color: #EAEAEA;
+            --secondary-text-color: #B0B0B0;
+            --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--main-font);
+            background-color: var(--background-color);
+            color: var(--main-text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color-hover);
+        }
+
+        /* --- Header & Contact --- */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            color: var(--secondary-text-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        /* --- About Me & Skills Section --- */
+        .about-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            background-color: var(--surface-color);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .about-section .bio {
+            flex: 2;
+        }
+
+        .about-section .skills {
+            flex: 1;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li {
+            background: #2a2a2a;
+            padding: 5px 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        
+        .skills h3 {
+            margin-top: 15px;
+        }
+        .skills h3:first-child {
+            margin-top: 0;
+        }
+
+
+        /* --- Projects Grid --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .project-media {
+            width: 100%;
+            height: 200px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+        }
+
+        .project-media img, .project-media iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: none;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        .project-info p {
+            font-size: 0.95em;
+            color: var(--secondary-text-color);
+            margin-bottom: 15px;
+        }
+        
+        .project-info .role {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .project-info .achievement {
+            /* Converted #14ff51 to RGBA for the background */
+            background-color: rgba(20, 255, 81, 0.1);
+            border-left: 3px solid var(--primary-color);
+            padding: 8px 12px;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .project-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #000; /* Black text for better readability on bright green */
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: var(--primary-color-darker);
+            color: #fff; /* White text on the darker green hover */
+        }
+        
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--secondary-text-color);
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Lautaro Gonzalez</h1>
+            <p class="subtitle">Or Luba.. which is what most people know me as.</p>
+
+            <p>I'm a Game Developer with over 8 years of experience in software development, and I've been focused on the game industry for the past 3 years.</p>
+            <p>I take every project seriously and always strive to deliver the highest quality possible, no matter the idea!</p>
+           
+            <div class="contact-info">
+                <a href="mailto:srlubadev@gmail.com">srlubadev@gmail.com</a> |
+                <a href="#">+54 221 314-4150</a> |
+                <a href="https://github.com/srluba" target="_blank">github.com/srluba</a> |
+                <a href="https://srlubadev.itch.io" target="_blank">srlubadev.itch.io</a>                 
+            </div>
+            <p></p>
+
+            <a href="cv.pdf" class="project-link" target="_blank">View CV</a>
+         
+        </header>
+
+        <h2>My Projects</h2>
+            <p>Here you have the best of what i've worked on</p>
+
+        <section class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-media">
+                       <img src="img/sms.png"></img>
+                </div>
+                <div class="project-info">
+                    <h3>Super Mario Studio</h3>
+                    <p class="role">
+                        Animator, Sole & Lead Programmer, Director, and Designer (3 months).
+                    </p>
+                    <p>
+                        An ambitious fangame project that seeks to recreate and expand the magic of the Mario games.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=3-g7y6U7I68" class="project-link" target="_blank">Watch Video</a>
+                    <a href="https://srlubadev.itch.io/super-mario-studio" class="project-link" target="_blank">View on itch.io</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                            <img src="img/edes.png"></img>
+                </div>
+                <div class="project-info">
+                    <h3>Everbloom Dreams</h3>
+                     <p class="role">
+                        Animator, Programmer, Designer, and Co-Director (1-week Game Jam).
+                    </p>
+                    <p>
+                        A game developed for Brackeys 2024.2 Game Jam, focused on a dreamlike and chill experience.
+                    </p>
+                    <div class="achievement">
+                        Placed #471 out of 1484 games
+                    </div>
+
+                    <a href="https://srlubadev.itch.io/everbloom-dreams" class="project-link" target="_blank">View on itch.io</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="img/chcue.png"></img>
+                </div>
+                <div class="project-info">
+                    <h3>Childhood.cue</h3>
+                    <p class="role">
+                        Lead Developer (2 Month Project for a Game Jam)
+                    </p>
+                    <p>
+                        A psychological horror fangame based on Sonic The Hedgehog, a submission for the LuigiKidEX3Challenge.
+                    </p>
+                    <div class="achievement">
+                        Placed #7 out of 30 games
+                    </div>
+
+                    <a href="https://srlubadev.itch.io/sonicps1homebrew" class="project-link" target="_blank">View on itch.io</a>
+                    <a href="https://www.youtube.com/watch?v=mKgPJ71T0IU" class="project-link" target="_blank">Watch Video</a>
+                </div>
+            </div>
+
+        </section>
+        
+        <footer class="footer">
+            <a href="https://www.youtube.com/@SrLubaDev">Youtube</a>
+
+            <p></p>
+            <p>My Discord Username is srluba</p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+
+    
